@@ -1,0 +1,18 @@
+on: 
+  push:
+    branches: 
+    - main
+  workflow_dispatch:
+
+jobs:
+  MyFirstJob:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Say Hello
+        run: echo "Hello from GitHub Actions!"    
+
+      - name: Checkout code
+        uses: actions/checkout@v4   # Checks out repo code
+
+      
